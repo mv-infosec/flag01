@@ -3,67 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find the Flag Challenge</title>
+    <title>Colorful Flag Hunt</title>
     <style>
         body {
+            background-color: #2c3e50;
             font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-            margin: 40px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
         h1 {
-            color: #333;
-        }
-
-        .flag-message {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1e90ff;
-            margin-bottom: 20px;
-        }
-
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .action-button {
-            margin: 10px;
-            padding: 15px 20px;
-            font-size: 16px;
-            font-weight: bold;
+            color: #ecf0f1;
+            font-size: 2em;
             text-align: center;
-            text-decoration: none;
-            color: #fff;
-            background-color: #4caf50;
-            border: 2px solid #4caf50;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
         }
 
-        .action-button:hover {
-            background-color: #45a049;
+        button, input, select {
+            margin: 10px;
+            padding: 8px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
+
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        input, select {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .menu {
+            display: inline-block;
+            position: relative;
+        }
+
+        .menu-content {
+            display: none;
+            position: absolute;
+            background-color: #f39c12;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .menu:hover .menu-content {
+            display: block;
+        }
+
+        /* Additional styles for more vibrant colors */
+        p {
+            color: #e67e22;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Can You Find the Flag?</h1>
-    <div class="flag-message">The flag is hidden somewhere!</div>
+    <h1>Can you find the flag?</h1>
+    
+    <button style="background-color: #3498db;">Click me</button>
+    <button style="background-color: #2ecc71;">Try this</button>
+    <button style="background-color: #e67e22;">Explore</button>
 
-    <div class="button-container">
-        <a href="#" class="action-button">Button 1</a>
-        <a href="#" class="action-button">Button 2</a>
-        <a href="#" class="action-button">Button 3</a>
-        <a href="#" class="action-button">Button 4</a>
-        <a href="#" class="action-button">Button 5</a>
-        <a href="#" class="action-button">Button 6</a>
-        <a href="#" class="action-button">Button 7</a>
-        <a href="#" class="action-button">Button 8</a>
-        <a href="#" class="action-button">Button 9</a>
-        <a href="#" class="action-button">Button 10</a>
+    <div class="menu">
+        <button class="menu-btn" style="background-color: #9b59b6;">Menu</button>
+        <div class="menu-content">
+            <button style="background-color: #1abc9c;">Option 1</button>
+            <button style="background-color: #e74c3c;">Option 2</button>
+            <button style="background-color: #f39c12;">Option 3</button>
+        </div>
     </div>
+
+    <input type="text" placeholder="Enter something..." style="background-color: #d35400;">
+
+    <div class="menu">
+        <button class="menu-btn" style="background-color: #3498db;">Select</button>
+        <div class="menu-content">
+            <select style="background-color: #2c3e50;">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+        </div>
+    </div>
+
+    <p>Look around and see if you can find the hidden flag!</p>
 </body>
 </html>
